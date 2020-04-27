@@ -1,0 +1,49 @@
+#faq{
+  .accordion-toggle{
+    cursor: text;
+  }
+  h3.title-accordion {
+    background: #238937;
+    border: none;
+    color: #fff;
+    font-family: $font-text-regular;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    margin: 2px 0 0 0;
+    padding: .5em 2.5em .5em .7em;
+    min-height: 0;
+    line-height: normal;
+    &.active{
+      span{
+        background-position:bottom;
+      }
+    }
+    span {
+      position: absolute;
+      background-image: url($url+"/documents/80379/4883042/ico_toggleAcordeon.png/7058b2d6-4efe-4c8c-8fb3-8e81eaa8b6db?t=1481060189606");
+      background-repeat: no-repeat;
+      background-position: top;
+      width: 28px;
+      height: 28px;
+      right: 10px;
+      left: inherit !important;
+      top: 50% !important;
+      margin-top: -14px !important;
+    }
+  }
+  .box-container{
+    font-family: $font-text-regular;
+    font-size: 18px;
+    border: none;
+    background-color: #ffffff;
+    overflow: hidden;
+    height: 0;
+    transition: all 0.3s ease-in-out;
+    p{
+      padding: 1em;
+    }
+  }
+}

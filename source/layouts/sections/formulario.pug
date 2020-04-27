@@ -1,0 +1,37 @@
+- var departamentos = ['Amazonas','Áncash','Apurímac','Arequipa','Ayacucho','Cajamarca','Cuzco','Huancavelica','Huánuco','Ica','Junín','La Libertad','Lambayeque','Lima','Loreto','Madre de Dios','Moquegua','Pasco','Piura','Puno','San Martín','Tacna','Tumbes','Ucayali']
+.row
+  .span12
+    h3.title Example Validate Form
+    form#testForm(method="post")
+        .row
+          .span4
+            label Nombre
+            input#nombre(type="text", name="nombre")
+          .span4
+            label DNI
+            input#dni(type="text", name="dni", maxlength="8")
+          .span4
+            label Email
+            input(type="text", name="email")
+        .row
+          .span4
+            label Numero Celular
+            input(type="text", name="celular", maxlength="9")
+          .span4
+            label Ruc
+            input(type="text", name="ruc", maxlength="11")
+          .span4
+            label Departamentos
+            select(name="departamento")
+              option(value="" selected) - Selecciona -
+                each val in departamentos
+                  option(value=val)= val
+        .row
+          .span4
+            .checkWrapper
+              input(type="checkbox", name="terminos")
+              label(style="display:inline-block") Términos y condiciones
+        .row
+          .span12
+            input.btn(type="submit", value="Enviar")
+        .clear

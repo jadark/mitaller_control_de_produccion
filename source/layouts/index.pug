@@ -1,0 +1,62 @@
+extends extends/base
+
+block header
+  include includes/header
+
+block content
+  .wrapper_main
+    .row
+      .col30
+        ul.list_activity
+          li.finish Magnitud del daño #[span.detail_progess Juan Perez] 
+          li.disable Inicio del trabajo
+          li.progress Fin (Est.) del trabajo
+          li Asesor de Servicio #[span.name_asesor Juan Perez] 
+          li.asignado Estado #[span ASIGNADO] 
+        
+      .col70
+        .container
+          .box_Tabs
+            .wrapper_pesTab
+              .pesTabNew.progress
+                span.title Carrocerìa
+                  p.text Cambio de #[br] Paneles y/o #[br] desabolladuras
+              .pesTabNew.finish
+                span.title Preparación
+                  p.text Lijado de metal #[br] Desengrasado #[br] Apli. Anticorrosivo
+              .pesTabNew
+                span.title Pintura 1
+                  p.text Masillado y secado #[br] Remasillado y secado #[br] Lijado
+              .pesTabNew
+                span.title Pintura 2
+                  p.text Aplicaciòn #[br] de Primer #[br] y Lijado
+              .pesTabNew
+                span.title Pintura 3
+                  p.text Aplicaciòn de #[br] Color, Barniz #[br] y Secado
+              .pesTabNew
+                span.title Acabado
+                  p.text Armado #[br] Pulido #[br] y Abrillantado
+            .content_Tabs
+              .detallelist
+
+          .box_body
+            .char_box
+              canvas#pieProject(width='300', height='300')
+            .box_container
+              .field
+                p.subtitle Control de calidad 
+                p.name.button NO
+              .field
+                p.subtitle tipo de Siniestro
+                p.name Colisión
+              .field
+                p.subtitle Parte Comprometida
+                p.name Delantero RH
+              .field
+                p.subtitle Localidad
+                p.name Lima
+              .field
+                p.subtitle Taller
+                p.name GALLEC SERVICE
+              .field.center
+                button.btn Salir

@@ -1,0 +1,61 @@
+#header {
+  position: relative;
+  padding: 8px 0 22px;
+  @include minTablet {
+    padding: 20px 0px 0px;
+  }
+  .inner_header{
+    padding: 2px 6px;
+    background-color: #c8c8c8;
+    border: 1px solid #9c9c9c;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo_country{
+      a{
+        display: inline-block;
+      }
+    }
+    h1.title{
+      margin: 0;
+      font-size: 18px;
+    }
+    .box_home{
+      display: inline-block;
+      background-color: #000;
+      padding: 4px;
+      border-radius: 50%;
+      svg{
+        max-width: 16px;
+        position: relative;
+        top: 1px;
+        g{
+          fill: #fff;
+        }
+      }
+    }
+  }
+  .bottom_header{
+    padding:10px 14px;
+    .field{
+      display: inline-block;
+      margin-left: 46px;
+      &:first-child{
+        margin-left: 0;
+      }
+      p{
+        margin: 0;
+        display: inline-block;
+      }
+      .subtitle{
+        font-size: 12px;
+        padding-right: 14px;
+      }
+      .name{
+        font-weight: 700;
+        font-size: 14px;
+      }
+    }
+  }
+}

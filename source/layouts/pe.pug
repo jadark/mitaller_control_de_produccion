@@ -1,0 +1,157 @@
+extends extends/base
+
+block header
+  include includes/header
+
+block content
+  .wrapper_main
+    .main_header
+      h1.title Bosch Car Service - La red de talleres de confianza
+    .row
+      .stage_left.w70
+        .section_box
+          .wrapper-slider
+            .slider#slider-main
+              
+              .item
+                .item-slider(style="background-image: url(images/slider_test_1.jpg)") 
+                  //- .text-slider
+                  //-   h3 Búsqueda de taller de reparación
+                  //-   p ¿Sabía que Bosch Car Service es una de las cadenas de talleres independientes más grandes del mundo con más de 16,500 talleres en más de 150 países? Si está buscando un taller de reparación automotriz en su área, puede encontrar la dirección rápida y fácilmente con nuestra función de búsqueda en línea de talleres de reparación.
+                  //-   a.button-slider Búscalo aquí
+              .item
+                .item-slider(style="background-image: url(images/slider_test_3.jpg)") 
+                  .text-slider
+                    h3 ¿Buscas un taller de confianza?
+                    p ¿Sabías que...? Bosch Car Service es una de las redes de talleres independientes más grandes del mundo, con más de 13.000 talleres en más de 150 países. Si buscas un taller de confianza cercano a tu domicilio o tu trabajo, encuéntralo de forma rápida y sencilla en nuestra web de Cita Previa.
+                    a.button-slider Localizalo aquí
+              .item
+                .item-slider(style="background-image: url(images/slider_test_2.jpg)") 
+                  .text-slider
+                    h3 MiBoschCarService
+                    p Conecta con tu taller, en un solo click, con la plataforma MiBoschCarService.Podrás solicitar presupuesto y cita al momento. #[br] Regístrate y descubre todas las ventajas. 
+                    a.button-slider Más información
+                  .direct_acces
+                    div
+                      a(href="http://", target="_blank", rel="noopener noreferrer").ico
+                        img(src="images/ico_agendar_cita.png", alt="").img
+                        p.title Agendar Cita
+                      a(href="http://", target="_blank", rel="noopener noreferrer").ico
+                        img(src="images/ico_staff.png", alt="").img
+                        p.title Agendar Cita
+                      a(href="http://", target="_blank", rel="noopener noreferrer").ico
+                        img(src="images/ico_emergencia.png", alt="").img
+                        p.title Emergencia
+                      a(href="http://", target="_blank", rel="noopener noreferrer").ico
+                        img(src="images/ico_historial_servicio.png", alt="").img
+                        p.title Historial #[br]de Servicio
+                    div
+                      a(href="http://", target="_blank", rel="noopener noreferrer").ico
+                        img(src="images/ico_precio_mantenimiento.png", alt="").img
+                        p.title Precio #[br]Mantenimiento
+                      a(href="http://", target="_blank", rel="noopener noreferrer").ico
+                        img(src="images/ico_pagar_servicio.png", alt="").img
+                        p.title Pagar #[br]Servicio
+              .item
+                .item-slider(style="background-image: url(images/slider_test_4.jpg)") 
+                  .text-slider
+                    h3 Revisión y mantenimiento.
+                    p El mantenimiento habitual del vehículo por un profesional es el único modo de detectar a tiempo cualquier problema que pueda producir un daño mayor en el vehículo. Para ello Bosch Car Service ofrece un paquete integral, desde la comprobación de las luces hasta reparaciones del sistema de frenado, con la finalidad de aumentar la seguridad de vehículos y peatones. 
+                    a.button-slider Ir al resumen de mantenimiento.
+          .box_search_mobile.visible-xs
+            a(href="talleres.html")
+              img(src="https://aa-boschbcs-es.resource.bosch.com/media/_tech/images/globals/btn_icon_workshopfinder.svg")
+              span Ver lista de talleres
+      .aside.w30
+        .box_calendar.visible-xs
+            h3.title Agenda tu cita en #[span MiBoschCarService]
+            .box_calendar_content
+              img(src="images/icon_calendar.svg")
+              p Puedes separar tu cita eligiendo el día, la hora y el taller de tu preferencia rápida, sencilla y directa.
+            .box_calendar_button
+              a(href="#") Agendar cita
+        .box_general.visible-xs
+          h3.title Compra productos on-line
+          p Puedes comprar repuestos Bosh o de marcas asociadas #[a(href="") AQUI].
+          .online
+            img(src="images/buy_online.jpg")
+        .box_general.services_taller
+          h3.title Servicio de taller
+          ul
+            li
+              a(href="")
+                img(src="images/icon_service_engine_white.svg")
+                span Motor
+            li
+              a(href="")
+                img(src="images/icon_service_brake_white.svg")
+                span Frenos
+            li
+              a(href="")
+                img(src="images/icon_service_glass_white.svg")
+                span Lunas
+            li
+              a(href="")
+                img(src="images/icon_service_battery_white.svg")
+                span Electrónica
+            li
+              a(href="")
+                img(src="images/icon_service_inspection_white.svg")
+                span Inspección
+            li
+              a(href="")
+                img(src="images/icon_service_light_white.svg")
+                span Luces
+            li
+              a(href="")
+                img(src="images/icon_service_tire_white.svg")
+                span Neumáticos
+            li
+              a(href="")
+                img(src="images/icon_service_mechanics_white.svg")
+                span Mecánica
+            li
+              a(href="")
+                img(src="images/icon_service_climate_white.svg")
+                span Climatización
+    .row
+      .stage_left.w70
+        .section_box.w33
+          .box_general.visible-md
+            h3.title Compra productos on-line
+            p Puedes comprar repuestos Bosh o de marcas asociadas #[a(href="") AQUI].
+            .online
+              img(src="images/buy_online.jpg")
+          .box_general
+            h3.title Talleres Bosch Car Service
+            p Si eres socio de #[strong Diners Club], recuerda que puedes acceder al listado de talleres Bosch Car Service que trabajan con este acuerdo y podrás beneficiarte de sus ventajas.
+            a(class="download_pdf" href="")
+              img(src="images/icon_pdf.svg")
+              span Ver listado
+              span (PDF, 192,4 kB)
+          .box_general.social_media
+            h3.title Bosch Car Service en Redes Sociales
+            p Compra tus productos #[strong on-line]
+            ul
+              li
+                a(href="")
+                  img(src="images/icon_facebook.svg")
+                  span Facebook
+              li
+                a(href="")
+                  img(src="images/icon_twitter.svg")
+                  span Twitter
+              li
+                a(href="")
+                  img(src="images/icon_youtube.svg")
+                  span Youtube          
+      .aside.w30
+        .box_calendar.hidden-md
+          h3.title Agenda tu cita en #[span MiBoschCarService]
+          .box_calendar_content
+            img(src="images/icon_calendar.svg")
+            p Puedes separar tu cita eligiendo el día, la hora y el taller de tu preferencia rápida, sencilla y directa.
+          .box_calendar_button
+            a(href="#") Agendar cita
+block footer
+  include includes/footer

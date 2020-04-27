@@ -1,0 +1,12 @@
+//Extras
+@import "extras/slick"; // librerías necesarias de acuerdo al proyecto.
+@import "extras/slick-theme"; // librerías necesarias de acuerdo al proyecto.
+
+@import "compass"; //En caso necesitemos usar Compass
+@import "globals/normalize";
+@import "modules/mediaqueries";
+@import "globals/typography";
+@import "globals/variables";
+@import "globals/global";
+
+@import "modules/layout";
