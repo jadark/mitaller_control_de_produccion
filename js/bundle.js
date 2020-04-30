@@ -45,6 +45,7 @@
 /***/ (function(module, exports) {
 
 	var chartProgress = document.getElementById("pieProject");
+	var tallerProgress = window.tallerProgress;
 	if (chartProgress) {
 	  var myChartCircle = new Chart(chartProgress, {
 	    type: 'doughnut',
@@ -52,8 +53,11 @@
 	      labels: ["Africa", 'null'],
 	      datasets: [{
 	        label: "Population (millions)",
-	        backgroundColor: ["#5283ff"],
-	        data: [68, 48]
+	        backgroundColor: [
+	          "#ff0000",
+	          "#fb843e"
+	        ],
+	        data: tallerProgress.dataProgress
 	      }]
 	    },
 	    plugins: [{
@@ -63,12 +67,12 @@
 	            ctx = chart.chart.ctx;
 	    
 	        ctx.restore();
-	        var fontSize = (height / 150).toFixed(2);
-	        ctx.font = fontSize + "em sans-serif";
-	        ctx.fillStyle = "#9b9b9b";
+	        var fontSize = (height / 100).toFixed(2);
+	        ctx.font ="bold "+ fontSize + "em sans-serif";
+	        ctx.fillStyle = "#4e4e4e";
 	        ctx.textBaseline = "middle";
 	    
-	        var text = "69%",
+	        var text = tallerProgress.porcentageTotal,
 	            textX = Math.round((width - ctx.measureText(text).width) / 2),
 	            textY = height / 2;
 	    
@@ -85,7 +89,7 @@
 	      },
 	      responsive: true,
 	      maintainAspectRatio: false,
-	      cutoutPercentage: 85
+	      cutoutPercentage: 66
 	    }
 
 	  });
