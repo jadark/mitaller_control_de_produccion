@@ -20,12 +20,13 @@
       p{
         display: inline-block;
         margin: 0;
-        font-size: 13px;
+        font-size: 16px;
       }
       .subtitle{
-        min-width: 160px;
+        min-width: 180px;
       }
       .name{
+        font-weight: 700;
         &.button{
           color: red;
           font-size: 18px;
@@ -42,6 +43,7 @@
         padding: 6px 24px;
         cursor: pointer;
         outline: none;
+        margin-top: 50px;
       }
     }
   }

@@ -68,70 +68,74 @@
         </div>
       </header>
       <div class="wrapper_main">
-        <div class="row">
-          <div class="col30">
-            <ul class="list_activity">
-              <li class="finish">
-                <p> Magnitud del daño</p>
-                <p><span class="detail_progess">Medio 1-2 paños</span> </p>
-              </li>
-              <li class="disable">Inicio del trabajo</li>
-              <li class="progress">Fin (Est.) del trabajo</li>
-              <li>Asesor de Servicio <span class="name_asesor">Juan Perez</span> </li>
-              <li class="finish">Estado <span class="detail_progess">ASIGNADO</span> </li>
+        <div class="breadcrum">
+          <div class="inner-breadcrum"><span>Estás aquí: </span>
+            <ul> 
+              <li><a href="#">Inicio</a></li>
             </ul>
-            <div class="box_img"><img src="https://via.placeholder.com/1920x880" alt=""></div>
           </div>
-          <div class="col70">
-            <div class="container">
-              <div class="box_Tabs">
-                <div class="wrapper_pesTab">
-                  <div class="pesTabNew progress"><span class="title">Carrocerìa
-                      <p class="text">Cambio de <br> Paneles y/o <br> desabolladuras</p></span></div>
-                  <div class="pesTabNew finish"><span class="title">Preparación
-                      <p class="text">Lijado de metal <br> Desengrasado <br> Apli. Anticorrosivo</p></span></div>
-                  <div class="pesTabNew"><span class="title">Pintura 1
-                      <p class="text">Masillado y secado <br> Remasillado y secado <br> Lijado</p></span></div>
-                  <div class="pesTabNew"><span class="title">Pintura 2
-                      <p class="text">Aplicaciòn <br> de Primer <br> y Lijado</p></span></div>
-                  <div class="pesTabNew"><span class="title">Pintura 3
-                      <p class="text">Aplicaciòn de <br> Color, Barniz <br> y Secado</p></span></div>
-                  <div class="pesTabNew"><span class="title">Acabado
-                      <p class="text">Armado <br> Pulido <br> y Abrillantado</p></span></div>
-                </div>
-                <div class="content_Tabs">
-                  <div class="detallelist"></div>
-                </div>
+        </div>
+        <div class="main_header">
+          <h1 class="title">Lista de Talleres</h1>
+        </div>
+        <div class="row">
+          <div class="table-general">
+            <div class="table-header">
+              <div class="table-header-inner">
+                <ul>
+                  <li class="cell-20">Provincia</li>
+                  <li class="cell-30 hidden-md">Taller / Dirección</li>
+                  <li class="cell-30 visible-xs">Taller <br> Dirección <br> Teléfono <br> e-mail</li>
+                  <li class="cell-15 hidden-md"> Teléfono</li>
+                  <li class="cell-20 hidden-md"> e-mail</li>
+                  <li class="cell-15">Ubigeo</li>
+                </ul>
               </div>
-              <div class="box_body">
-                <div class="char_box">
-                  <canvas id="pieProject" width="300" height="300"></canvas>
+            </div>
+            <div class="table-body">
+              <div class="table-body-row">
+                <div class="table-body-cell cell-20">
+                  <p class="text-regular">Lima</p>
                 </div>
-                <div class="box_container">
-                  <div class="field">
-                    <p class="subtitle">Control de calidad </p>
-                    <p class="name button">NO</p>
-                  </div>
-                  <div class="field">
-                    <p class="subtitle">tipo de Siniestro</p>
-                    <p class="name">Colisión</p>
-                  </div>
-                  <div class="field">
-                    <p class="subtitle">Parte Comprometida</p>
-                    <p class="name">Delantero RH</p>
-                  </div>
-                  <div class="field">
-                    <p class="subtitle">Localidad</p>
-                    <p class="name">Lima</p>
-                  </div>
-                  <div class="field">
-                    <p class="subtitle">Taller</p>
-                    <p class="name">GALLEC SERVICE</p>
-                  </div>
-                  <div class="field center">
-                    <button class="btn">Salir</button>
-                  </div>
+                <div class="table-body-cell cell-30">
+                  <p class="text-strong">BCS Arroyo Motor</p>
+                  <p class="text-small">Avenida Montepríncipe, 23 Local D-1, 28668, BOADILLA DEL MONTE Distancia: <strong>3.5 km</strong></p>
+                  <p class="text-regular phone-text visible-xs">01 444 8888</p><a class="text-email visible-xs" href="mailto:bcs.arroyo.motor@gmail.com">bcs.arroyo.motor@gmail.com</a>
                 </div>
+                <div class="table-body-cell cell-15 hidden-md-table">
+                  <p class="text-regular">01 444 8888</p>
+                </div>
+                <div class="table-body-cell cell-20 hidden-md-table"><a class="text-email" href="">bcs.arroyo.motor@gmail.com</a></div>
+                <div class="table-body-cell cell-15"><a class="icon-map" href="" data-modal="central-bosh-cash"><img src="images/ico_map.png"></a></div>
+              </div>
+              <div class="table-body-row">
+                <div class="table-body-cell cell-20">
+                  <p class="text-regular">Lima</p>
+                </div>
+                <div class="table-body-cell cell-30">
+                  <p class="text-strong">BCS Arroyo Motor</p>
+                  <p class="text-small">Avenida Montepríncipe, 23 Local D-1, 28668, BOADILLA DEL MONTE Distancia: <strong>3.5 km</strong></p>
+                  <p class="text-regular phone-text visible-xs">01 444 8888</p><a class="text-email visible-xs" href="mailto:bcs.arroyo.motor@gmail.com">bcs.arroyo.motor@gmail.com</a>
+                </div>
+                <div class="table-body-cell cell-15 hidden-md-table">
+                  <p class="text-regular">01 444 8888</p>
+                </div>
+                <div class="table-body-cell cell-20 hidden-md-table"><a class="text-email" href="">bcs.arroyo.motor@gmail.com</a></div>
+                <div class="table-body-cell cell-15"><a class="icon-map" href="" data-modal="xtreme-motors-cars"><img src="images/ico_map.png"></a></div>
+              </div>
+              <div class="table-body-row">
+                <div class="table-body-cell cell-20">
+                  <p class="text-regular">Lima</p>
+                </div>
+                <div class="table-body-cell cell-30">
+                  <p class="text-strong">BCS Arroyo Motor</p>
+                  <p class="text-small">Avenida Montepríncipe, 23 Local D-1, 28668, BOADILLA DEL MONTE Distancia: <strong>3.5 km</strong></p>
+                  <p class="text-regular phone-text visible-xs">01 444 8888</p><a class="text-email visible-xs" href="mailto:bcs.arroyo.motor@gmail.com">bcs.arroyo.motor@gmail.com</a>
+                </div>
+                <div class="table-body-cell cell-15 hidden-md-table">
+                  <p class="text-regular">01 444 8888</p>
+                </div>
+                <div class="table-body-cell cell-20 hidden-md-table"><a class="text-email" href="">bcs.arroyo.motor@gmail.com</a></div>
               </div>
             </div>
           </div>
