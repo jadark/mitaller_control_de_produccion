@@ -156,11 +156,11 @@ gulp.task('plugins', function () {
 gulp.task('watch', function () {
   gulp.watch('source/data/*.yaml', ['data', 'templates']);
   gulp.watch('source/sass/**/**/*.scss', ['sass']);
-  gulp.watch('source/coffee/*.coffee', ['coffee']);
+  // gulp.watch('source/coffee/*.coffee', ['coffee']);
   gulp.watch('source/javascript/**/*.js', ['javascript']);
   gulp.watch('source/layouts/**/**/*.pug', ['templates']);
-  gulp.watch('source/javascript/plugins/*.js', ['plugins']);
-  gulp.watch('source/images/**/*.*', ['images']);
+  // gulp.watch('source/javascript/plugins/*.js', ['plugins']);
+  // gulp.watch('source/images/**/*.*', ['images']);
 });
 
 // Static server
@@ -203,9 +203,9 @@ var taskDefault = [
   'sass',
   //'coffee',
   'javascript',
-  'plugins',
-  'fonts',
-  'images',
+  // 'plugins',
+  // 'fonts',
+  // 'images',
   'watch',
   'serve',
   'clear'
