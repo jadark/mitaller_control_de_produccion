@@ -19,13 +19,13 @@ $break-oldPhone: 320px;
   }
 }
 
-@mixin maxTablet {
+@mixin minTablet{
   @media (min-width: #{$break-MaxTablet}) {
     @content;
   }
 }
 
-@mixin minTablet {
+@mixin maxTablet {
   @media (max-width: #{$break-Mintablet}) {
     @content;
   }

@@ -1,0 +1,66 @@
+@import "compass"; //En caso necesitemos usar Compass
+@import "globals/normalize";
+@import "modules/mediaqueries";
+@import "globals/variables";
+@import "globals/global";
+
+
+body{
+}
+
+#app{
+  display: block;
+  height: 100vh;
+  background-image: url("http://subaru.eanet.pe/misubaru/resources/images/slider1.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  .container{
+    max-width: 1280px;
+    padding: 0 16px;
+    background-color: coral;
+  }
+  .title{
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    padding-top: 1.5rem;
+  }
+  ul.list{
+    padding: 40px 10px 0px;
+    max-width: 420px;
+    margin: 9.5vw 0 0 7vw;
+    font-size: 0;
+    text-align: right;
+    @include maxTablet{
+      margin: 0;
+      padding-top: 30px;
+    }
+    .box_btn{
+      margin-bottom: 30px;
+      display: inline-block;
+      width: 25%;
+      vertical-align: top;
+      text-align: center;  
+      @include maxTablet{
+        margin-bottom: 24px;
+      }
+      .ico_btn{
+        display: inline-block;
+        img{
+          max-width: 58px;
+        }
+      }
+      p{
+        margin: 0;
+        padding: 2px 0 0;
+        color: white;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 500;
+        text-align: center;
+        text-shadow: 0px 3px 2px #000000;
+      }
+    }
+  }
+}
