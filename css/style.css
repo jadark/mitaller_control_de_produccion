@@ -627,7 +627,7 @@ template {
   margin: 0 auto;
   position: relative;
   padding: 0 20px; }
-  @media (min-width: 1024px) {
+  @media (max-width: 768px) {
     .container {
       padding: 0; } }
 
@@ -653,17 +653,9 @@ template {
     margin: 0.2rem 0 0 0;
     list-style: none;
     border: 1px solid #6c6c6c;
-    border-radius: 4px;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: space-between;
-    -moz-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between; }
-    .list_activity li p {
-      margin: 0; }
+    border-radius: 4px; }
+    .list_activity li .name_asesor {
+      font-size: 12px; }
     .list_activity li:first-child {
       margin: 0; }
     .list_activity li.disable {
@@ -673,12 +665,10 @@ template {
       cursor: pointer;
       color: red; }
     .list_activity li.finish .detail_progess {
-      color: blue; }
+      color: blue;
+      font-size: 12px; }
     .list_activity li.asignado span {
       color: red; }
-
-.box_img {
-  padding-top: 26px; }
 
 .box_Tabs .wrapper_pesTab {
   display: -webkit-flex;
@@ -708,44 +698,43 @@ template {
     .box_Tabs .wrapper_pesTab .pesTabNew p.text {
       margin: 0;
       padding-top: 0.2rem;
-      font-size: 9px;
+      font-size: 11px;
       font-weight: normal; }
     .box_Tabs .wrapper_pesTab .pesTabNew::before, .box_Tabs .wrapper_pesTab .pesTabNew::after {
       content: '';
       width: 0px;
       height: 0px;
-      border-top: 27px solid transparent;
-      border-bottom: 27px solid transparent;
+      border-top: 34px solid transparent;
+      border-bottom: 34px solid transparent;
       position: absolute;
       top: 0;
       transition: all 0.3s ease-in-out; }
     .box_Tabs .wrapper_pesTab .pesTabNew::before {
-      border-left: 12px solid white;
-      left: 0px; }
+      border-left: 8px solid white;
+      left: -1px; }
     .box_Tabs .wrapper_pesTab .pesTabNew::after {
       right: 0px;
-      border-left: 12px solid coral; }
+      border-left: 8px solid #e9e9e9; }
     .box_Tabs .wrapper_pesTab .pesTabNew.progress {
       cursor: pointer;
       background-color: #c2cdeb;
       color: white; }
       .box_Tabs .wrapper_pesTab .pesTabNew.progress::after {
         right: 0px;
-        border-left: 12px solid #c2cdeb; }
+        border-left: 6px solid #c2cdeb; }
     .box_Tabs .wrapper_pesTab .pesTabNew.finish {
       background-color: #4777ff;
       color: white; }
       .box_Tabs .wrapper_pesTab .pesTabNew.finish::after {
         right: 0px;
-        border-left: 12px solid #4777ff; }
+        border-left: 6px solid #4777ff; }
     .box_Tabs .wrapper_pesTab .pesTabNew:nth-child(1) {
       border: 0; }
     .box_Tabs .wrapper_pesTab .pesTabNew span {
       display: block;
       width: 100%;
       position: relative;
-      padding: 4px 0;
-      line-height: 1; }
+      padding: 6px 0; }
       .box_Tabs .wrapper_pesTab .pesTabNew span::after {
         content: '';
         display: block;
@@ -753,7 +742,7 @@ template {
         position: absolute;
         right: 0;
         top: -1px;
-        width: 12px;
+        width: 6px;
         height: 104%; }
 
 .box_Tabs .content_Tabs .detallelist {
@@ -798,7 +787,7 @@ template {
 #header {
   position: relative;
   padding: 8px 0 22px; }
-  @media (min-width: 1024px) {
+  @media (max-width: 768px) {
     #header {
       padding: 20px 0px 0px; } }
   #header .inner_header {
@@ -883,17 +872,15 @@ template {
       .box_body .box_container .field p {
         display: inline-block;
         margin: 0;
-        font-size: 16px; }
+        font-size: 13px; }
       .box_body .box_container .field .subtitle {
-        min-width: 180px; }
-      .box_body .box_container .field .name {
-        font-weight: 700; }
-        .box_body .box_container .field .name.button {
-          color: red;
-          font-size: 18px;
-          font-weight: 700;
-          border: 1px solid #777;
-          padding: 2px 8px; }
+        min-width: 160px; }
+      .box_body .box_container .field .name.button {
+        color: red;
+        font-size: 18px;
+        font-weight: 700;
+        border: 1px solid #777;
+        padding: 2px 8px; }
       .box_body .box_container .field .btn {
         border: 0;
         background-color: blue;
@@ -901,5 +888,4 @@ template {
         text-transform: uppercase;
         padding: 6px 24px;
         cursor: pointer;
-        outline: none;
-        margin-top: 50px; }
+        outline: none; }
