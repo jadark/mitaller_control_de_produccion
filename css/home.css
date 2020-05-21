@@ -587,7 +587,6 @@ template {
 #app {
   display: block;
   height: 100vh;
-  background-image: url("../images/bg_subaru_pc.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
   @media (max-width: 768px) {
@@ -595,31 +594,76 @@ template {
       margin: 0;
       background-image: url("http://subaru.eanet.pe/misubaru/resources/images/slider1.jpg"); } }
   #app .container {
-    max-width: 1280px;
-    padding: 0 16px;
-    background-color: coral; }
-  #app .title {
-    font-size: 30px;
-    margin: 0;
-    color: white;
-    text-align: center;
-    font-weight: normal;
-    padding: 6px 0;
-    line-height: 1;
-    color: black;
-    background: #e9e9e9;
-    background: linear-gradient(0deg, #e9e9e9 0%, #fffbfb 100%); }
-    #app .title span {
-      font-weight: bold; }
+    max-width: 1100px;
+    padding: 0 0;
+    position: relative; }
+  #app .header {
+    position: relative;
+    margin: 0; }
+    #app .header .country {
+      background-color: #fff;
+      margin: 0;
+      text-align: right; }
+      #app .header .country .logo {
+        margin-right: 8px; }
+    #app .header .top_head {
+      position: relative;
+      background: #e9e9e9;
+      background: linear-gradient(0deg, #e9e9e9 0%, #fffbfb 100%);
+      padding: 8px 0; }
+    #app .header h1.title {
+      letter-spacing: -0.2px;
+      font-size: 19px;
+      margin: 0;
+      color: white;
+      text-align: center;
+      font-weight: normal;
+      line-height: 1;
+      color: black; }
+      #app .header h1.title span {
+        text-transform: uppercase;
+        font-weight: bold; }
+    #app .header .box_home {
+      display: inline-block;
+      background-color: #000;
+      padding: 4px;
+      border-radius: 50%;
+      position: absolute;
+      right: 10px;
+      top: 3px; }
+      #app .header .box_home svg {
+        max-width: 16px;
+        position: relative;
+        top: 1px; }
+        #app .header .box_home svg g {
+          fill: #fff; }
+  #app .wrapper_img {
+    position: relative;
+    line-height: 0; }
+    #app .wrapper_img .box_login {
+      max-width: 100;
+      width: auto;
+      position: absolute;
+      left: 50%;
+      margin-left: -140px;
+      top: 10px; }
+    #app .wrapper_img .bg_wrapper {
+      width: 100%; }
+      @media (max-width: 768px) {
+        #app .wrapper_img .bg_wrapper {
+          display: none; } }
   #app ul.list {
-    padding: 40px 10px 0px;
-    max-width: 420px;
-    margin: 1.5vw 0 0 1.5vw;
+    padding: 40px 0 0px;
+    max-width: 400px;
+    margin: 5.5vw 0 0 0vw;
     font-size: 0;
-    text-align: right; }
+    text-align: right;
+    position: absolute;
+    top: 0; }
     @media (max-width: 768px) {
       #app ul.list {
         padding-top: 10px;
+        top: 80px;
         margin: 9.5vw 0 0 0vw; } }
     #app ul.list .box_btn {
       margin-bottom: 30px;
@@ -643,3 +687,29 @@ template {
         font-weight: 500;
         text-align: center;
         text-shadow: 0px 3px 2px #000000; }
+  #app ul.list_footer {
+    margin: 0;
+    padding: 0;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex; }
+    @media (max-width: 768px) {
+      #app ul.list_footer {
+        display: none; } }
+    #app ul.list_footer li {
+      width: 24.4%;
+      margin: 0;
+      padding: 0;
+      background: #e9e9e9;
+      background: linear-gradient(0deg, #e9e9e9 0%, #fffbfb 100%);
+      text-align: center;
+      list-style: none;
+      font-size: 15px;
+      padding: 3px 0;
+      margin-left: 1%; }
+      #app ul.list_footer li:first-child {
+        margin-left: 0; }
+      #app ul.list_footer li a {
+        color: black;
+        text-decoration: none; }
