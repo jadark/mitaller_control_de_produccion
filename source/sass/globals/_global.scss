@@ -13,6 +13,7 @@
 }
 .col30{
   width: 30%;
+  padding-right: 2%;
 }
 .col70{
   width: 70%;
@@ -34,7 +35,7 @@
       margin: 0;
     }
     .name_asesor{
-      
+      color: blue;      
     }
     &:first-child{
       margin: 0;
@@ -46,6 +47,9 @@
     &.progress{
       cursor: pointer;
       color: red;
+      .detail_progess{
+        color: blue;
+      }
     }
     &.finish{
       .detail_progess{
@@ -110,8 +114,8 @@
 
       &::after {
         right: 0px;
-        // border-left: 12px solid #e9e9e9;
-        border-left: 12px solid coral;
+        border-left: 12px solid #d8d6d6;
+        // border-left: 12px solid coral;
       }
 
       &.progress{

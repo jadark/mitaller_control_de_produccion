@@ -2,10 +2,10 @@
   position: relative;
   padding: 8px 0 22px;
   @include minTablet {
-    padding: 20px 0px 0px;
+    padding: 20px 0px 12px;
   }
   .inner_header{
-    padding: 2px 6px;
+    padding: 4px 6px;
     background-color: #c8c8c8;
     border: 1px solid #9c9c9c;
     border-radius: 6px;

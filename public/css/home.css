@@ -427,7 +427,8 @@ template {
   display: flex; }
 
 .col30 {
-  width: 30%; }
+  width: 30%;
+  padding-right: 2%; }
 
 .col70 {
   width: 70%; }
@@ -453,6 +454,8 @@ template {
     justify-content: space-between; }
     .list_activity li p {
       margin: 0; }
+    .list_activity li .name_asesor {
+      color: blue; }
     .list_activity li:first-child {
       margin: 0; }
     .list_activity li.disable {
@@ -461,6 +464,8 @@ template {
     .list_activity li.progress {
       cursor: pointer;
       color: red; }
+      .list_activity li.progress .detail_progess {
+        color: blue; }
     .list_activity li.finish .detail_progess {
       color: blue; }
     .list_activity li.asignado span {
@@ -513,7 +518,7 @@ template {
       left: 0px; }
     .box_Tabs .wrapper_pesTab .pesTabNew::after {
       right: 0px;
-      border-left: 12px solid coral; }
+      border-left: 12px solid #d8d6d6; }
     .box_Tabs .wrapper_pesTab .pesTabNew.progress {
       cursor: pointer;
       background-color: #c2cdeb;
