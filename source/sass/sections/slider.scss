@@ -1,8 +1,15 @@
 .box_body{
-  display: flex;
+  display: block;
   padding-top: 30px;
+  @include minTablet{
+    display: flex;
+  }
   .char_box{
-    width: 400px;
+    max-width: 300px;
+    @include minTablet{
+      width: 400px;
+      max-width: initial;
+    }
   }
   .box_container{
     display: flex;
