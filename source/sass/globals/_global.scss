@@ -68,6 +68,15 @@
         color: red;
       }
     }
+    .status{
+      width: 154px;
+      outline: none;
+      box-shadow: inherit;
+      border: 0;
+      font-weight: bold;
+      position: relative;
+      left: -2px;
+    }
   }
 }
 .box_img{

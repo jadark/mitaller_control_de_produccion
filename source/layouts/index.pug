@@ -12,7 +12,21 @@ block content
           li.finish
             p  Magnitud del daño
             p #[span.detail_progess Medio 1-2 paños] 
-          li.finish Estado #[span.detail_progess ASIGNADO] 
+          //- li.finish Estado #[span.detail_progess ASIGNADO] 
+          li.finish
+            select.status#status(name="status")      
+              option(hidden selected) Estados
+              option(value="1") Elaboracion de presupuesto
+              option(value="2") Presupuesto por aprobar
+              option(value="3") Aprobado
+              option(value="4") En Proceso
+              option(value="5") Pausado por Repuestos
+              option(value="6") Detenido por ampliación
+              option(value="7") Trabajos Terminados
+              option(value="7") Control de Calidad
+              option(value="8") Para Entrega
+              option(value="9") Entregado
+            span.detail_progess En Proceso
           li.finish Inicio del trabajo #[span.detail_progess 01 Jun 2020] 
           li.progress Fin (Est.) del trabajo #[span.detail_progess 01 Jun 2020] 
         .box_img
@@ -47,20 +61,24 @@ block content
             .char_box
               canvas#pieProject(width='300', height='300')
             .box_container
-              .field
-                p.subtitle Control de calidad 
-                p.name.button NO
-              .field
-                p.subtitle tipo de Siniestro
-                p.name Colisión
-              .field
-                p.subtitle Parte Comprometida
-                p.name Delantero RH
-              .field
-                p.subtitle Localidad
-                p.name Lima
-              .field
-                p.subtitle Taller
-                p.name GALLEC SERVICE
+              .box_etapa
+                p.line_etapa Etapa del Proceso
+                p.line_progress Preparación Pintura
+              .box_inner
+                .field
+                  p.subtitle Control de calidad 
+                  p.name.button NO
+                .field
+                  p.subtitle tipo de Siniestro
+                  p.name Colisión
+                .field
+                  p.subtitle Parte Comprometida
+                  p.name Delantero RH
+                .field
+                  p.subtitle Localidad
+                  p.name Lima
+                .field
+                  p.subtitle Taller
+                  p.name GALLEC SERVICE
               .field.center
                 button.btn Salir

@@ -49,6 +49,18 @@
       &:first-child{
         margin-left: 0;
       }
+      &.box_name{
+        display: none;
+        @include minTablet{
+          display: inline-block;
+        }
+      }
+      &.box_code{
+        display: none;
+        @include minTablet{
+          display: inline-block;
+        }
+      }
       p{
         margin: 0;
         display: inline-block;
@@ -56,13 +68,13 @@
       .subtitle{
         font-size: 11px;
         @include minTablet{
-          font-size: 12px;
+          font-size: 14px;
           padding-right: 14px;
         }
       }
       .name{
         font-weight: 700;
-        font-size: 12px;
+        font-size: 11px;
         @include minTablet{
           font-size: 14px;
         }
