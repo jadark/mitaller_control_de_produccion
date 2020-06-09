@@ -8,7 +8,6 @@
     <meta name="keywords" content="">
     <meta name="author" content="">
     <!-- Theme color (Only Chrome Mobile)-->
-    <meta name="theme-color" content="#db5945">
     <!-- Facebook meta tags-->
     <meta property="og:title" content="">
     <meta property="og:description" content="">
@@ -49,11 +48,11 @@
             </svg></a>
         </div>
         <div class="bottom_header">
-          <div class="field">
+          <div class="field box_name">
             <p class="subtitle">Nombre</p>
             <p class="name">Acuña Guitierrez, Eduardo Acaro</p>
           </div>
-          <div class="field">
+          <div class="field box_code">
             <p class="subtitle">Código</p>
             <p class="name">24589493</p>
           </div>
@@ -76,7 +75,21 @@
                 <p> Magnitud del daño</p>
                 <p><span class="detail_progess">Medio 1-2 paños</span> </p>
               </li>
-              <li class="finish">Estado <span class="detail_progess">ASIGNADO</span> </li>
+              <li class="finish">
+                <select class="status" id="status" name="status">     
+                  <option hidden selected>Estados</option>
+                  <option value="1">Elaboracion de presupuesto</option>
+                  <option value="2">Presupuesto por aprobar</option>
+                  <option value="3">Aprobado</option>
+                  <option value="4">En Proceso</option>
+                  <option value="5">Pausado por Repuestos</option>
+                  <option value="6">Detenido por ampliación</option>
+                  <option value="7">Trabajos Terminados</option>
+                  <option value="7">Control de Calidad</option>
+                  <option value="8">Para Entrega</option>
+                  <option value="9">Entregado</option>
+                </select><span class="detail_progess">En Proceso</span>
+              </li>
               <li class="finish">Inicio del trabajo <span class="detail_progess">01 Jun 2020</span> </li>
               <li class="progress">Fin (Est.) del trabajo <span class="detail_progess">01 Jun 2020</span> </li>
             </ul>
@@ -108,25 +121,31 @@
                   <canvas id="pieProject" width="300" height="300"></canvas>
                 </div>
                 <div class="box_container">
-                  <div class="field">
-                    <p class="subtitle">Control de calidad </p>
-                    <p class="name button">NO</p>
+                  <div class="box_etapa">
+                    <p class="line_etapa">Etapa del Proceso</p>
+                    <p class="line_progress">Preparación Pintura</p>
                   </div>
-                  <div class="field">
-                    <p class="subtitle">tipo de Siniestro</p>
-                    <p class="name">Colisión</p>
-                  </div>
-                  <div class="field">
-                    <p class="subtitle">Parte Comprometida</p>
-                    <p class="name">Delantero RH</p>
-                  </div>
-                  <div class="field">
-                    <p class="subtitle">Localidad</p>
-                    <p class="name">Lima</p>
-                  </div>
-                  <div class="field">
-                    <p class="subtitle">Taller</p>
-                    <p class="name">GALLEC SERVICE</p>
+                  <div class="box_inner">
+                    <div class="field">
+                      <p class="subtitle">Control de calidad </p>
+                      <p class="name button">NO</p>
+                    </div>
+                    <div class="field">
+                      <p class="subtitle">tipo de Siniestro</p>
+                      <p class="name">Colisión</p>
+                    </div>
+                    <div class="field">
+                      <p class="subtitle">Parte Comprometida</p>
+                      <p class="name">Delantero RH</p>
+                    </div>
+                    <div class="field">
+                      <p class="subtitle">Localidad</p>
+                      <p class="name">Lima</p>
+                    </div>
+                    <div class="field">
+                      <p class="subtitle">Taller</p>
+                      <p class="name">GALLEC SERVICE</p>
+                    </div>
                   </div>
                   <div class="field center">
                     <button class="btn">Salir</button>
