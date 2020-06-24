@@ -438,6 +438,21 @@ template {
   .col70 {
     width: 70%; } }
 
+#pieProject {
+  -webkit-transform: scale(0.85);
+  -ms-transform: scale(0.85);
+  transform: scale(0.85);
+  position: relative;
+  top: -20px;
+  margin-bottom: -20px; }
+  @media (min-width: 1024px) {
+    #pieProject {
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+      top: 0;
+      margin-bottom: 0; } }
+
 .list_activity {
   margin: 0;
   padding: 0; }
@@ -482,7 +497,8 @@ template {
       border: 0;
       font-weight: bold;
       position: relative;
-      left: -2px; }
+      left: -2px;
+      background: #dadada; }
 
 .box_img {
   padding-top: 26px;
