@@ -16,17 +16,24 @@
     flex-flow: column;
     justify-content: center;
     .box_etapa{
+      border:1px solid #000000;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px;
+      margin-bottom: 8px;
       @include minTablet{
         display: none;
       }
       p{
         display: inline-block;
         font-size: 14px;
+        margin: 0;
         &.line_etapa{
           min-width: 150px;
           font-weight: bold;
           position: relative;
-          margin-right: 18px;
           padding: 4px 4px;
           background-color: #dadada;
           &::before{
@@ -49,15 +56,27 @@
     }
     .box_inner{
       transition: height 0.35s ease-in-out;
-      overflow: hidden;
-      &:not(.active) {
-        display: none;
-        @include minTablet{
-          display: block;
-        }
-      }
+      overflow: hidden;      
+      // &:not(.active) {
+      //   display: none;
+      //   @include minTablet{
+      //     display: block;
+      //   }
+      // }
       @include minTablet{
         display: block;
+        width: 310px;
+      }
+      .field{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 8px;
+        padding-right: 8px;
+        @include minTablet{
+          padding-left: 0;
+          padding-right: 0;
+        }
       }
     }
     .field{
@@ -74,9 +93,7 @@
         margin: 0;
         font-size: 16px;
       }
-      .subtitle{
-        min-width: 168px;
-      }
+      
       .name{
         font-weight: 700;
         &.button{

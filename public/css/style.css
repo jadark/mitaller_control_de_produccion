@@ -915,7 +915,7 @@ template {
         display: none; }
         @media (min-width: 1024px) {
           #header .bottom_header .field .subtitle {
-            display: block;
+            display: inline-block;
             font-size: 14px;
             padding-right: 14px; } }
       #header .bottom_header .field .name {
@@ -954,43 +954,75 @@ template {
     -moz-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
-    @media (min-width: 1024px) {
-      .box_body .box_container .box_etapa {
-        display: none; } }
-    .box_body .box_container .box_etapa p {
-      display: inline-block;
-      font-size: 14px; }
-      .box_body .box_container .box_etapa p.line_etapa {
-        min-width: 150px;
-        font-weight: bold;
-        position: relative;
-        margin-right: 18px;
-        padding: 4px 4px;
-        background-color: #dadada; }
-        .box_body .box_container .box_etapa p.line_etapa::before {
-          content: '';
-          display: block;
-          position: absolute;
-          right: 8px;
-          top: 10px;
-          width: 0;
-          height: 0;
-          border-style: solid;
-          border-width: 6px 5px 0 5px;
-          border-color: #000000 transparent transparent transparent; }
-      .box_body .box_container .box_etapa p.line_progress {
-        color: blue; }
+    .box_body .box_container .box_etapa {
+      border: 1px solid #000000;
+      border-radius: 4px;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: space-between;
+      -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 6px;
+      margin-bottom: 8px; }
+      @media (min-width: 1024px) {
+        .box_body .box_container .box_etapa {
+          display: none; } }
+      .box_body .box_container .box_etapa p {
+        display: inline-block;
+        font-size: 14px;
+        margin: 0; }
+        .box_body .box_container .box_etapa p.line_etapa {
+          min-width: 150px;
+          font-weight: bold;
+          position: relative;
+          padding: 4px 4px;
+          background-color: #dadada; }
+          .box_body .box_container .box_etapa p.line_etapa::before {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 8px;
+            top: 10px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 5px 0 5px;
+            border-color: #000000 transparent transparent transparent; }
+        .box_body .box_container .box_etapa p.line_progress {
+          color: blue; }
     .box_body .box_container .box_inner {
       transition: height 0.35s ease-in-out;
       overflow: hidden; }
-      .box_body .box_container .box_inner:not(.active) {
-        display: none; }
-        @media (min-width: 1024px) {
-          .box_body .box_container .box_inner:not(.active) {
-            display: block; } }
       @media (min-width: 1024px) {
         .box_body .box_container .box_inner {
-          display: block; } }
+          display: block;
+          width: 310px; } }
+      .box_body .box_container .box_inner .field {
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-justify-content: space-between;
+        -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-left: 8px;
+        padding-right: 8px; }
+        @media (min-width: 1024px) {
+          .box_body .box_container .box_inner .field {
+            padding-left: 0;
+            padding-right: 0; } }
     .box_body .box_container .field {
       display: block;
       padding-top: 20px; }
@@ -1002,8 +1034,6 @@ template {
         display: inline-block;
         margin: 0;
         font-size: 16px; }
-      .box_body .box_container .field .subtitle {
-        min-width: 168px; }
       .box_body .box_container .field .name {
         font-weight: 700; }
         .box_body .box_container .field .name.button {
