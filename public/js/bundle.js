@@ -94,27 +94,43 @@
 
 	  });
 	}
-	// Dropdrown Select
-	// document.querySelector(".line_etapa").addEventListener('click', function (event) {
-	//   event.preventDefault();
-	//   var container = document.querySelector(".box_container .box_inner");
-	//     if (!container.classList.contains('active')) {
-	//       container.classList.add('active');
-	//       container.style.height = 'auto';
-	//       var height = container.clientHeight + 'px';
-	//       container.style.height = '0px';
-	//       setTimeout(function () {
-	//         container.style.height = height;
-	//       }, 0);
-	//     } else {
-	//       container.style.height = '0px';
-	//       container.addEventListener('transitionend', function () {
-	//         container.classList.remove('active');
-	//       }, {
-	//         once: true
-	//       });
-	//     }
-	// })
+	document.querySelector(".box_Tabs").addEventListener('click', function (evn) {
+	  if (evn.target == this) {
+	    this.classList.remove("open");
+	  }
+	})
+	// Dropdrown Select Etapa de proceso
+	document.querySelector(".line_etapa").addEventListener('click', function (event) {
+	  event.preventDefault();
+	  document.querySelector(".box_Tabs").classList.add("open");
+	  // var container = document.querySelector(".box_container .box_inner");
+	  //   if (!container.classList.contains('active')) {
+	  //     container.classList.add('active');
+	  //     container.style.height = 'auto';
+	  //     var height = container.clientHeight + 'px';
+	  //     container.style.height = '0px';
+	  //     setTimeout(function () {
+	  //       container.style.height = height;
+	  //     }, 0);
+	  //   } else {
+	  //     container.style.height = '0px';
+	  //     container.addEventListener('transitionend', function () {
+	  //       container.classList.remove('active');
+	  //     }, {
+	  //       once: true
+	  //     });
+	  //   }
+	})
+
+	// Se ejcuta cuando se hace click en el listado de Etapas de proceso
+	var pestTabNew = document.querySelectorAll(".pesTabNew");
+	for (var i = 0; i < pestTabNew.length; i++) {
+	  pestTabNew[i].addEventListener('click', function (evn) {
+	    setTimeout(() => {
+	      document.querySelector(".box_Tabs").classList.remove("open");
+	    }, 100);
+	  })
+	}
 
 
 /***/ })

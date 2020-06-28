@@ -26,6 +26,20 @@
       @include minTablet{
         display: none;
       }
+      .dropdown-button{
+        height: auto;
+        text-transform: inherit;
+        letter-spacing: inherit;
+        padding: 4px 4px 0px;
+        line-height: 20px;
+        background-color: #dadada;
+        color: #000000;
+        font-size: 14px;
+        i.right{
+          margin-left: 6px;
+          color: #000000;
+        }
+      }
       p{
         display: inline-block;
         font-size: 14px;
@@ -104,7 +118,7 @@
           padding: 2px 8px;
         }
       }
-      .btn{
+      .btn_submit{
         border: 0;
         background-color: blue;
         color: white;

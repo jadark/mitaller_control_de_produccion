@@ -1,4 +1,8 @@
+html,body{
+  font-size: 16px;
+}
 .container {
+  width: auto;
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
@@ -8,8 +12,9 @@
   }
 }
 
-.row{
+.container .row{
   display: block;
+  margin: 0;
   @include minTablet{
     display: flex;
   }
@@ -21,6 +26,9 @@
   }
 }
 .col70{
+  .container{
+    padding: 0;
+  }
   @include minTablet {
     width: 70%;
   }
@@ -67,6 +75,9 @@
     &.progress{
       cursor: pointer;
       color: red;
+      overflow: visible;
+      height: auto;
+      background-color: transparent;
       .detail_progess{
         color: blue;
       }
@@ -90,6 +101,10 @@
       position: relative;
       left: -2px;
       background: #dadada;
+      display: block;
+      height: auto;
+      padding: 0;
+      border-radius: 0;
     }
   }
 }
@@ -102,47 +117,90 @@
 }
 // Tabs
 .box_Tabs {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.26);
+  z-index: 10;
+  overflow: hidden;
+  visibility: hidden;
+  &.open{
+    overflow: visible;
+    visibility: visible;
+  }
   @include minTablet{
     display: block;
+    width: auto;
+    height: auto;
+    position: relative;
+    background-color:transparent;
   }
   .wrapper_pesTab {
-    display: flex;
-    margin-bottom: 14px;
+    width: 90%;
+    background-color: #fff;
+    border-radius: 6px;
+    @include minTablet{
+      display: flex;
+      margin-bottom: 14px;
+      width: 100%;
+    }
     .pesTabNew {
       color: #3b3b3b;
+      font-size: 16px;
       display: block;
       text-decoration: none;
-      text-align: center;
-      font-size: 16px;
-      flex-basis: 25%;
-      padding: 0px 0;
-      transition: all ease-in-out 300ms;
-      position: relative;
-      background-color: #e9e9e9;
-      letter-spacing: -.5px;
-      font-weight: bold;
-      margin-left: 0.5rem;
-      cursor: not-allowed;
+      border-top: 1px solid #dadada;
+      padding: 8px;
+      font-size: 14px;
+      @include minTablet{
+        font-size: 16px;
+        text-align: center;
+        flex-basis: 25%;
+        padding: 0px 0;
+        transition: all ease-in-out 300ms;
+        position: relative;
+        background-color: #e9e9e9;
+        letter-spacing: -.5px;
+        font-weight: bold;
+        margin-left: 0.5rem;
+        cursor: not-allowed;
+      }
       &:first-child {
+        border-top: 0;
         margin-left: 0;
       }
       p.text{
         margin: 0;
-        padding-top: 0.2rem;
-        font-size: 9px;
         font-weight: normal;
+        font-size: 11px;
+        @include minTablet{
+          font-size: 9px;
+          padding-top: 0.2rem;
+        }
+        br{
+          display: none;
+          @include minTablet{
+            display: inline;
+          }
+        }
       }
 
       &::before, &::after {
-        content: '';
-        width: 0px;
-        height: 0px;
-        border-top: 27px solid transparent;
-        border-bottom: 27px solid transparent;
-        position: absolute;
-        top: 0;
-        transition: all 0.3s ease-in-out;
+        @include minTablet{
+          content: '';
+          width: 0px;
+          height: 0px;
+          border-top: 27px solid transparent;
+          border-bottom: 27px solid transparent;
+          position: absolute;
+          top: 0;
+          transition: all 0.3s ease-in-out;
+        }
       }
 
       &::before {
@@ -157,20 +215,24 @@
       }
 
       &.progress{
-        cursor: pointer;
-        background-color: #c2cdeb;
-        color: white;
-        &::after {
-          right: 0px;
-          border-left: 12px solid #c2cdeb;
+        @include minTablet{
+          cursor: pointer;
+          background-color: #c2cdeb;
+          color: white;
+          &::after {
+            right: 0px;
+            border-left: 12px solid #c2cdeb;
+          }
         }
       }
       &.finish{
-        background-color: #4777ff;
-        color: white;
-        &::after {
-          right: 0px;
-          border-left: 12px solid #4777ff;
+        @include minTablet{
+          background-color: #4777ff;
+          color: white;
+          &::after {
+            right: 0px;
+            border-left: 12px solid #4777ff;
+          }
         }
       }
 
@@ -180,20 +242,42 @@
 
       span {
         display: block;
-        width: 100%;
         position: relative;
-        padding: 4px 0;
-        line-height: 1;
-        &::after {
+        &:hover{
+          &::before{
+            background-color: blue;
+          }
+        }
+        &:before{
           content: '';
           display: block;
-          background-color: white;
+          width: 12px;
+          height: 12px;
+          border: 1px solid #3b3b3b;
+          border-radius: 50%;
           position: absolute;
           right: 0;
-          top: -1px;
-          width: 12px;
-          height: 104%;
-          // display: none;
+          top: 8px;
+        }
+        @include minTablet{
+          width: 100%;
+          position: relative;
+          padding: 4px 0;
+          line-height: 1;
+          &::before{
+            display: none;
+          }
+          &::after {
+            content: '';
+            display: block;
+            background-color: white;
+            position: absolute;
+            right: 0;
+            top: -1px;
+            width: 12px;
+            height: 104%;
+            // display: none;
+          }
         }
       }
     }
