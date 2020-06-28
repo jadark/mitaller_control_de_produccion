@@ -764,6 +764,8 @@ html, body {
       width: auto;
       height: auto;
       position: relative;
+      overflow: visible;
+      visibility: visible;
       background-color: transparent; } }
   .box_Tabs .wrapper_pesTab {
     width: 90%;
