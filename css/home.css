@@ -411,7 +411,11 @@ template {
 [hidden] {
   display: none; }
 
+html, body {
+  font-size: 16px; }
+
 .container {
+  width: auto;
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
@@ -420,10 +424,11 @@ template {
     .container {
       padding: 0; } }
 
-.row {
-  display: block; }
+.container .row {
+  display: block;
+  margin: 0; }
   @media (min-width: 1024px) {
-    .row {
+    .container .row {
       display: -webkit-flex;
       display: -moz-box;
       display: -ms-flexbox;
@@ -433,6 +438,9 @@ template {
   .col30 {
     padding-right: 2%;
     width: 30%; } }
+
+.col70 .container {
+  padding: 0; }
 
 @media (min-width: 1024px) {
   .col70 {
@@ -483,7 +491,10 @@ template {
       opacity: 0.5; }
     .list_activity li.progress {
       cursor: pointer;
-      color: red; }
+      color: red;
+      overflow: visible;
+      height: auto;
+      background-color: transparent; }
       .list_activity li.progress .detail_progess {
         color: blue; }
     .list_activity li.finish .detail_progess {
@@ -498,7 +509,11 @@ template {
       font-weight: bold;
       position: relative;
       left: -2px;
-      background: #dadada; }
+      background: #dadada;
+      display: block;
+      height: auto;
+      padding: 0;
+      border-radius: 0; }
 
 .box_img {
   padding-top: 26px;
@@ -508,85 +523,155 @@ template {
       display: block; } }
 
 .box_Tabs {
-  display: none; }
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.26);
+  z-index: 10;
+  overflow: hidden;
+  visibility: hidden; }
+  .box_Tabs.open {
+    overflow: visible;
+    visibility: visible; }
   @media (min-width: 1024px) {
     .box_Tabs {
-      display: block; } }
+      display: block;
+      width: auto;
+      height: auto;
+      position: relative;
+      overflow: visible;
+      visibility: visible;
+      background-color: transparent; } }
   .box_Tabs .wrapper_pesTab {
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-bottom: 14px; }
+    width: 90%;
+    background-color: #fff;
+    border-radius: 6px; }
+    @media (min-width: 1024px) {
+      .box_Tabs .wrapper_pesTab {
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-bottom: 14px;
+        width: 100%; } }
     .box_Tabs .wrapper_pesTab .pesTabNew {
       color: #3b3b3b;
+      font-size: 16px;
       display: block;
       text-decoration: none;
-      text-align: center;
-      font-size: 16px;
-      -webkit-flex-basis: 25%;
-      -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
-      padding: 0px 0;
-      transition: all ease-in-out 300ms;
-      position: relative;
-      background-color: #e9e9e9;
-      letter-spacing: -.5px;
-      font-weight: bold;
-      margin-left: 0.5rem;
-      cursor: not-allowed; }
+      border-top: 1px solid #dadada;
+      padding: 8px;
+      font-size: 14px; }
+      @media (min-width: 1024px) {
+        .box_Tabs .wrapper_pesTab .pesTabNew {
+          font-size: 16px;
+          text-align: center;
+          -webkit-flex-basis: 25%;
+          -ms-flex-preferred-size: 25%;
+          flex-basis: 25%;
+          padding: 0px 0;
+          transition: all ease-in-out 300ms;
+          position: relative;
+          background-color: #e9e9e9;
+          letter-spacing: -.5px;
+          font-weight: bold;
+          margin-left: 0.5rem;
+          cursor: not-allowed; } }
       .box_Tabs .wrapper_pesTab .pesTabNew:first-child {
+        border-top: 0;
         margin-left: 0; }
       .box_Tabs .wrapper_pesTab .pesTabNew p.text {
         margin: 0;
-        padding-top: 0.2rem;
-        font-size: 9px;
-        font-weight: normal; }
-      .box_Tabs .wrapper_pesTab .pesTabNew::before, .box_Tabs .wrapper_pesTab .pesTabNew::after {
-        content: '';
-        width: 0px;
-        height: 0px;
-        border-top: 27px solid transparent;
-        border-bottom: 27px solid transparent;
-        position: absolute;
-        top: 0;
-        transition: all 0.3s ease-in-out; }
+        font-weight: normal;
+        font-size: 11px; }
+        @media (min-width: 1024px) {
+          .box_Tabs .wrapper_pesTab .pesTabNew p.text {
+            font-size: 9px;
+            padding-top: 0.2rem; } }
+        .box_Tabs .wrapper_pesTab .pesTabNew p.text br {
+          display: none; }
+          @media (min-width: 1024px) {
+            .box_Tabs .wrapper_pesTab .pesTabNew p.text br {
+              display: inline; } }
+      @media (min-width: 1024px) {
+        .box_Tabs .wrapper_pesTab .pesTabNew::before, .box_Tabs .wrapper_pesTab .pesTabNew::after {
+          content: '';
+          width: 0px;
+          height: 0px;
+          border-top: 27px solid transparent;
+          border-bottom: 27px solid transparent;
+          position: absolute;
+          top: 0;
+          transition: all 0.3s ease-in-out; } }
       .box_Tabs .wrapper_pesTab .pesTabNew::before {
         border-left: 12px solid white;
         left: 0px; }
       .box_Tabs .wrapper_pesTab .pesTabNew::after {
         right: 0px;
         border-left: 12px solid #d8d6d6; }
-      .box_Tabs .wrapper_pesTab .pesTabNew.progress {
-        cursor: pointer;
-        background-color: #c2cdeb;
-        color: white; }
-        .box_Tabs .wrapper_pesTab .pesTabNew.progress::after {
-          right: 0px;
-          border-left: 12px solid #c2cdeb; }
-      .box_Tabs .wrapper_pesTab .pesTabNew.finish {
-        background-color: #4777ff;
-        color: white; }
-        .box_Tabs .wrapper_pesTab .pesTabNew.finish::after {
-          right: 0px;
-          border-left: 12px solid #4777ff; }
+      @media (min-width: 1024px) {
+        .box_Tabs .wrapper_pesTab .pesTabNew.progress {
+          cursor: pointer;
+          background-color: #c2cdeb;
+          color: white; }
+          .box_Tabs .wrapper_pesTab .pesTabNew.progress::after {
+            right: 0px;
+            border-left: 12px solid #c2cdeb; } }
+      @media (min-width: 1024px) {
+        .box_Tabs .wrapper_pesTab .pesTabNew.finish {
+          background-color: #4777ff;
+          color: white; }
+          .box_Tabs .wrapper_pesTab .pesTabNew.finish::after {
+            right: 0px;
+            border-left: 12px solid #4777ff; } }
       .box_Tabs .wrapper_pesTab .pesTabNew:nth-child(1) {
         border: 0; }
       .box_Tabs .wrapper_pesTab .pesTabNew span {
         display: block;
-        width: 100%;
-        position: relative;
-        padding: 4px 0;
-        line-height: 1; }
-        .box_Tabs .wrapper_pesTab .pesTabNew span::after {
+        position: relative; }
+        .box_Tabs .wrapper_pesTab .pesTabNew span:hover::before {
+          background-color: blue; }
+        .box_Tabs .wrapper_pesTab .pesTabNew span:before {
           content: '';
           display: block;
-          background-color: white;
+          width: 12px;
+          height: 12px;
+          border: 1px solid #3b3b3b;
+          border-radius: 50%;
           position: absolute;
           right: 0;
-          top: -1px;
-          width: 12px;
-          height: 104%; }
+          top: 8px; }
+        @media (min-width: 1024px) {
+          .box_Tabs .wrapper_pesTab .pesTabNew span {
+            width: 100%;
+            position: relative;
+            padding: 4px 0;
+            line-height: 1; }
+            .box_Tabs .wrapper_pesTab .pesTabNew span::before {
+              display: none; }
+            .box_Tabs .wrapper_pesTab .pesTabNew span::after {
+              content: '';
+              display: block;
+              background-color: white;
+              position: absolute;
+              right: 0;
+              top: -1px;
+              width: 12px;
+              height: 104%; } }
   .box_Tabs .content_Tabs .detallelist {
     height: 0;
     visibility: hidden;
