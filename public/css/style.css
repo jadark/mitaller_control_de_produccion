@@ -1040,6 +1040,8 @@ html, body {
     -moz-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
+    .box_body .box_container .list_activity {
+      padding-bottom: 24px; }
     .box_body .box_container .box_etapa {
       border: 1px solid #000000;
       border-radius: 4px;
@@ -1134,6 +1136,8 @@ html, body {
         font-size: 16px; }
       .box_body .box_container .field .name {
         font-weight: 700; }
+        .box_body .box_container .field .name.blue {
+          color: blue; }
         .box_body .box_container .field .name.button {
           color: red;
           font-size: 18px;

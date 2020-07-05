@@ -8,7 +8,12 @@ block content
     .row
       .col30
         ul.list_activity
-          li Asesor de Servicio #[span.name_asesor Juan Perez] 
+          li.finish
+            p  Tipo de Siniestro
+            p #[span.detail_progess Colisión] 
+          li.finish
+            p  Parte Comprometida
+            p #[span.detail_progess Delantero RH] 
           li.finish
             p  Magnitud del daño
             p #[span.detail_progess Medio 1-2 paños] 
@@ -27,8 +32,6 @@ block content
               option(value="8") Para Entrega
               option(value="9") Entregado
             span.detail_progess En Proceso
-          li.finish Inicio del trabajo #[span.detail_progess 01 Jun 2020] 
-          li.progress Fin (Est.) del trabajo #[span.detail_progess 01 Jun 2020] 
         .box_img
           img(src="https://via.placeholder.com/1920x880", alt="")
         
@@ -64,21 +67,21 @@ block content
               .box_etapa
                 p.line_etapa Etapa del Proceso
                 p.line_progress Preparación Pintura
+              
+              ul.list_activity
+                li.finish Inicio del trabajo #[span.detail_progess 01 Jun 2020] 
+                li.progress Fin (Est.) del trabajo #[span.detail_progess 01 Jun 2020] 
+                li Asesor de Servicio #[span.name_asesor Juan Perez] 
+              
               .box_inner
-                //- .field
-                //-   p.subtitle Control de calidad 
-                //-   p.name.button NO
                 .field
-                  p.subtitle tipo de Siniestro
-                  p.name Colisión
-                .field
-                  p.subtitle Parte Comprometida
-                  p.name Delantero RH
+                  p.subtitle Taller
+                  p.name GALLEC SERVICE
                 .field
                   p.subtitle Localidad
                   p.name Lima
                 .field
-                  p.subtitle Taller
-                  p.name GALLEC SERVICE
+                  p.subtitle Cia. Seguro
+                  p.name.blue Pacífico
               .field.center
                 button.btn_submit Salir
