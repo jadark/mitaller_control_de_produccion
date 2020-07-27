@@ -502,7 +502,7 @@ html, body {
     .list_activity li.asignado span {
       color: red; }
     .list_activity li .status {
-      width: 154px;
+      max-width: 190px;
       outline: none;
       box-shadow: inherit;
       border: 0;
@@ -513,7 +513,12 @@ html, body {
       display: block;
       height: auto;
       padding: 0;
-      border-radius: 0; }
+      border-radius: 0;
+      font-size: 14px;
+      color: blue; }
+      @media (min-width: 1024px) {
+        .list_activity li .status {
+          font-size: 16px; } }
 
 .box_img {
   padding-top: 26px;

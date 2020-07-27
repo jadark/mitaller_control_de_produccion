@@ -19,7 +19,7 @@ block content
             p #[span.detail_progess Medio 1-2 paños] 
           //- li.finish Estado #[span.detail_progess ASIGNADO] 
           li.finish
-            span.detail_progess Estados
+            p Estado
             select.status#status(name="status")      
               //- option(hidden selected) Estados
               option(value="4") En Proceso
@@ -66,8 +66,8 @@ block content
               canvas#pieProject(width='300', height='300')
             .box_container
               .box_etapa
-                p.line_etapa Etapa del Proceso
-                p.line_progress Preparación Pintura
+                p.finish #[b Etapa del Proceso]
+                p.line_etapa Preparación Pintura
               
               ul.list_activity
                 li.finish Inicio del trabajo #[span.detail_progess 01 Jun 2020] 

@@ -713,7 +713,7 @@ html, body {
     .list_activity li.asignado span {
       color: red; }
     .list_activity li .status {
-      width: 154px;
+      max-width: 190px;
       outline: none;
       box-shadow: inherit;
       border: 0;
@@ -724,7 +724,12 @@ html, body {
       display: block;
       height: auto;
       padding: 0;
-      border-radius: 0; }
+      border-radius: 0;
+      font-size: 14px;
+      color: blue; }
+      @media (min-width: 1024px) {
+        .list_activity li .status {
+          font-size: 16px; } }
 
 .box_img {
   padding-top: 26px;
@@ -1079,11 +1084,12 @@ html, body {
         font-size: 14px;
         margin: 0; }
         .box_body .box_container .box_etapa p.line_etapa {
-          min-width: 150px;
+          min-width: 174px;
           font-weight: bold;
           position: relative;
-          padding: 4px 4px;
-          background-color: #dadada; }
+          padding: 4px 8px;
+          background-color: #dadada;
+          color: blue; }
           .box_body .box_container .box_etapa p.line_etapa::before {
             content: '';
             display: block;
@@ -1094,7 +1100,7 @@ html, body {
             height: 0;
             border-style: solid;
             border-width: 6px 5px 0 5px;
-            border-color: #000000 transparent transparent transparent; }
+            border-color: blue transparent transparent transparent; }
         .box_body .box_container .box_etapa p.line_progress {
           color: blue; }
     .box_body .box_container .box_inner {
@@ -1152,4 +1158,4 @@ html, body {
         padding: 6px 24px;
         cursor: pointer;
         outline: none;
-        margin-top: 30px; }
+        margin: 30px 0 20px; }

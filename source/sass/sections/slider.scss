@@ -48,11 +48,12 @@
         font-size: 14px;
         margin: 0;
         &.line_etapa{
-          min-width: 150px;
+          min-width: 174px;
           font-weight: bold;
           position: relative;
-          padding: 4px 4px;
+          padding: 4px 8px;
           background-color: #dadada;
+          color: blue;
           &::before{
             content: '';
             display: block;
@@ -63,7 +64,7 @@
             height: 0;
             border-style: solid;
             border-width: 6px 5px 0 5px;
-            border-color: #000000 transparent transparent transparent;
+            border-color: blue transparent transparent transparent;
           }
         }
         &.line_progress{
@@ -132,7 +133,7 @@
         padding: 6px 24px;
         cursor: pointer;
         outline: none;
-        margin-top: 30px;
+        margin: 30px 0 20px;
       }
     }
   }
