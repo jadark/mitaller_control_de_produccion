@@ -53,6 +53,24 @@ document.querySelector(".box_Tabs").addEventListener('click', function (evn) {
     this.classList.remove("open");
   }
 })
+
+// Detectar Status del proceso
+const selectStatus = document.querySelector("#status");
+if (selectStatus.value != 4) {
+  document.querySelector(".box_Tabs").classList.add("closed");
+  document.querySelector(".box_etapa").classList.add("closed");
+}
+selectStatus.addEventListener("change", function (e) {
+  console.log(this.value, " =====222=========");
+  if (this.value == 4) {
+    document.querySelector(".box_Tabs").classList.remove("closed")
+    document.querySelector(".box_etapa").classList.remove("closed");
+  } else { 
+    document.querySelector(".box_Tabs").classList.add("closed")
+    document.querySelector(".box_etapa").classList.add("closed");
+  }
+})
+
 // Dropdrown Select Etapa de proceso
 document.querySelector(".line_etapa").addEventListener('click', function (event) {
   event.preventDefault();

@@ -22,16 +22,14 @@ block content
             p Estado
             select.status#status(name="status")      
               //- option(hidden selected) Estados
+              option(value="1") Por iniciar
+              option(value="2") Preparando Respuesto
+              option(value="3") Presupuesto a aprobar
               option(value="4") En Proceso
-              option(value="1") Elaboracion de presupuesto
-              option(value="2") Presupuesto por aprobar
-              option(value="3") Aprobado
-              option(value="5") Pausado por Repuestos
-              option(value="6") Detenido por ampliación
-              option(value="7") Trabajos Terminados
-              option(value="7") Control de Calidad
+              option(value="5") Detenido por repuestos
+              option(value="6") Pausado por ampliación
+              option(value="7") Anular
               option(value="8") Para Entrega
-              option(value="9") Entregado
             
         .box_img
           img(src="https://via.placeholder.com/1920x880", alt="")
