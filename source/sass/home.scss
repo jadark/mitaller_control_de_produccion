@@ -1,0 +1,161 @@
+@import "compass"; //En caso necesitemos usar Compass
+@import "globals/normalize";
+@import "modules/mediaqueries";
+@import "globals/variables";
+@import "globals/global";
+
+
+body{
+}
+
+#app{
+  display: block;
+  height: 100vh;
+  // background-image: url("../images/bg_subaru_pc.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  @include maxTablet{
+    margin: 0;
+    background-image: url("../images/bg_subaru_mobile.jpg");
+  }
+  .container{
+    max-width: 1100px;
+    padding: 0 0;
+    position: relative;
+  }
+  .header{
+    position: relative;
+    margin: 0;
+    .logo_counter{
+      position: absolute;
+      left: 10px;
+      top: 6px;
+    }
+    .top_head{
+      position: relative;
+      background: rgb(233,233,233);
+      background: linear-gradient(0deg, rgba(233,233,233,1) 0%, rgba(255,251,251,1) 100%);
+      padding: 8px 0;
+    }
+    h1.title{
+      letter-spacing: -0.2px;
+      font-size: 19px;
+      margin: 0;
+      color: white;
+      text-align: center;
+      font-weight: normal;
+      line-height: 1;
+      color: black;
+      span{
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+    .box_home{
+      display: inline-block;
+      background-color: #000;
+      padding: 4px;
+      border-radius: 50%;
+      position: absolute;
+      right: 10px;
+      top: 3px;
+      svg{
+        max-width: 16px;
+        position: relative;
+        top: 1px;
+        g{
+          fill: #fff;
+        }
+      }
+    }
+  }
+  .wrapper_img{
+    position: relative;
+    line-height: 0;
+    .box_login{
+      display: none;
+      max-width: 100;
+      width: auto;
+      position: absolute;
+      left: 50%;
+      margin-left: -140px;
+      top: 10px;
+      @include maxTablet{
+        
+      }
+    }
+    .bg_wrapper{
+      width: 100%;
+      @include maxTablet{
+        display: none;
+      }
+    }
+  }
+  ul.list{
+    padding: 40px 0 0px;
+    max-width: 400px;
+    margin: 1.3vw 0 0 0vw;
+    font-size: 0;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    @include maxTablet{
+      padding-top: 10px;
+      top: 0;
+      margin: 5.5vw 0 0 0vw;  
+    }
+    .box_btn{
+      margin-bottom: 30px;
+      display: inline-block;
+      width: 25%;
+      vertical-align: top;
+      text-align: center;  
+      @include maxTablet{
+        margin-bottom: 24px;
+      }
+      .ico_btn{
+        display: inline-block;
+        img{
+          max-width: 58px;
+        }
+      }
+      p{
+        margin: 0;
+        padding: 2px 0 0;
+        color: white;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 500;
+        text-align: center;
+        text-shadow: 0px 3px 2px #000000;
+      }
+    }
+  }
+  ul.list_footer{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    @include maxTablet{
+      display: none;
+    }
+    li{
+      width: 33%;
+      margin: 0;
+      padding: 0;
+      background: rgb(233,233,233);
+      background: linear-gradient(0deg, rgba(233,233,233,1) 0%, rgba(255,251,251,1) 100%);
+      text-align: center;
+      list-style: none;
+      font-size: 15px;
+      padding: 3px 0;
+      margin-left: 1%;
+      &:first-child{
+        margin-left: 0;
+      }
+      a{
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
+}

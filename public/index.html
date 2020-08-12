@@ -3,12 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bosch Car Service - Latam</title>
+    <title>MiTaller Control de Producción</title>
     <meta name="description" content="Movistar">
     <meta name="keywords" content="">
     <meta name="author" content="">
     <!-- Theme color (Only Chrome Mobile)-->
-    <meta name="theme-color" content="#db5945">
     <!-- Facebook meta tags-->
     <meta property="og:title" content="">
     <meta property="og:description" content="">
@@ -23,7 +22,7 @@
       <header id="header">
         <div class="inner_header">
           <div class="logo_country"><a href=""><img src="http://eacorp.pe/subaru/pc-images/peru.png"></a></div>
-          <h1 class="title">Avances de Trabajos</h1><a class="box_home" href="">
+          <h1 class="title">Avance Trabajos de Pintura</h1><a class="box_home" href="">
             <svg id="Capa_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 460.298 460.297" style="enable-background:new 0 0 460.298 460.297;" xml:space="preserve">
               <g>
                 <g>
@@ -49,11 +48,11 @@
             </svg></a>
         </div>
         <div class="bottom_header">
-          <div class="field">
+          <div class="field box_name">
             <p class="subtitle">Nombre</p>
             <p class="name">Acuña Guitierrez, Eduardo Acaro</p>
           </div>
-          <div class="field">
+          <div class="field box_code">
             <p class="subtitle">Código</p>
             <p class="name">24589493</p>
           </div>
@@ -65,18 +64,44 @@
             <p class="subtitle">Placa</p>
             <p class="name">ALU202</p>
           </div>
+          <div class="field">
+            <p class="subtitle">Color</p>
+            <p class="name">Rojo</p>
+          </div>
         </div>
       </header>
       <div class="wrapper_main">
         <div class="row">
           <div class="col30">
             <ul class="list_activity">
-              <li class="finish">Magnitud del daño <span class="detail_progess">Juan Perez</span> </li>
-              <li class="disable">Inicio del trabajo</li>
-              <li class="progress">Fin (Est.) del trabajo</li>
-              <li>Asesor de Servicio <span class="name_asesor">Juan Perez</span> </li>
-              <li class="asignado">Estado <span>ASIGNADO</span> </li>
+              <li class="finish">
+                <p> Tipo de Siniestro</p>
+                <p><span class="detail_progess">Colisión</span> </p>
+              </li>
+              <li class="finish">
+                <p> Parte Comprometida</p>
+                <p><span class="detail_progess">Delantero RH</span> </p>
+              </li>
+              <li class="finish">
+                <p> Magnitud del daño</p>
+                <p><span class="detail_progess">Medio 1-2 paños</span> </p>
+              </li>
+              <li class="finish">
+                <p>Estado</p>
+                <select class="status" id="status" name="status">     
+                  <option value="1">Evaluación de daños</option>
+                  <option value="2">Preparando Presupuesto</option>
+                  <option value="3">Presupuesto x aprobar</option>
+                  <option value="4">Aprobado</option>
+                  <option value="5">En Proceso</option>
+                  <option value="6">Detenido por repuestos</option>
+                  <option value="7">Detenido por ampliación</option>
+                  <option value="8">Trabajo terminado</option>
+                  <option value="9">Listo para Entrega</option>
+                </select>
+              </li>
             </ul>
+            <div class="box_img"><img src="https://via.placeholder.com/1920x880" alt=""></div>
           </div>
           <div class="col70">
             <div class="container">
@@ -104,28 +129,31 @@
                   <canvas id="pieProject" width="300" height="300"></canvas>
                 </div>
                 <div class="box_container">
-                  <div class="field">
-                    <p class="subtitle">Control de calidad </p>
-                    <p class="name button">NO</p>
+                  <div class="box_etapa">
+                    <p class="finish"><b>Etapa del Proceso</b></p>
+                    <p class="line_etapa">Preparación Pintura</p>
                   </div>
-                  <div class="field">
-                    <p class="subtitle">tipo de Siniestro</p>
-                    <p class="name">Colisión</p>
-                  </div>
-                  <div class="field">
-                    <p class="subtitle">Parte Comprometida</p>
-                    <p class="name">Delantero RH</p>
-                  </div>
-                  <div class="field">
-                    <p class="subtitle">Localidad</p>
-                    <p class="name">Lima</p>
-                  </div>
-                  <div class="field">
-                    <p class="subtitle">Taller</p>
-                    <p class="name">GALLEC SERVICE</p>
+                  <ul class="list_activity">
+                    <li class="finish">Inicio del trabajo <span class="detail_progess">01 Jun 2020</span> </li>
+                    <li class="progress">Fin (Est.) del trabajo <span class="detail_progess">01 Jun 2020</span> </li>
+                    <li>Asesor de Servicio <span class="name_asesor">Juan Perez</span> </li>
+                  </ul>
+                  <div class="box_inner">
+                    <div class="field">
+                      <p class="subtitle">Taller</p>
+                      <p class="name">GALLEC SERVICE</p>
+                    </div>
+                    <div class="field">
+                      <p class="subtitle">Localidad</p>
+                      <p class="name">Lima</p>
+                    </div>
+                    <div class="field">
+                      <p class="subtitle">Cia. Seguro</p>
+                      <p class="name blue">Pacífico</p>
+                    </div>
                   </div>
                   <div class="field center">
-                    <button class="btn">Salir</button>
+                    <button class="btn_submit">Salir</button>
                   </div>
                 </div>
               </div>
@@ -134,6 +162,16 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript">
+      var tallerProgress = {
+        porcentageTotal :'32%',
+        dataProgress : [
+          15,
+          17,
+          63
+        ]
+      }
+    </script>
     <!-- jQuery Librerias-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
     <!-- Compilado de application.js-->

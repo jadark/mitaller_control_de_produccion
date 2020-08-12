@@ -3,12 +3,12 @@ html(lang="es-ES")
   head
     meta(charset='utf-8')
     meta(name='viewport' ,content='width=device-width, initial-scale=1')
-    title Bosch Car Service - Latam
+    title MiTaller Control de Producción
     meta(name='description', content="Movistar")
     meta(name='keywords', content="")
     meta(name='author', content="")
     // Theme color (Only Chrome Mobile)
-    meta(name="theme-color", content="#db5945")
+    //- meta(name="theme-color", content="#db5945")
     // Facebook meta tags
     meta(property='og:title', content="")
     meta(property='og:description', content="")
@@ -27,7 +27,17 @@ html(lang="es-ES")
 
       block footer
     
+    script(type="text/javascript").
+      var tallerProgress = {
+        porcentageTotal :'32%',
+        dataProgress : [
+          15,
+          17,
+          63
+        ]
+      }
     // jQuery Librerias
     script(src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js')
     // Compilado de application.js
     script(src='js/bundle.js')
+

@@ -1,11 +1,11 @@
 #header {
   position: relative;
-  padding: 8px 0 22px;
+  padding: 8px 0 10px;
   @include minTablet {
-    padding: 20px 0px 0px;
+    padding: 20px 0px 12px;
   }
   .inner_header{
-    padding: 2px 6px;
+    padding: 4px 6px;
     background-color: #c8c8c8;
     border: 1px solid #9c9c9c;
     border-radius: 6px;
@@ -20,6 +20,7 @@
     h1.title{
       margin: 0;
       font-size: 18px;
+      font-weight: 700;
     }
     .box_home{
       display: inline-block;
@@ -37,24 +38,52 @@
     }
   }
   .bottom_header{
-    padding:10px 14px;
+    padding:10px 0px;
+    display: flex;
+    justify-content: space-between;
+    @include minTablet{
+      display: block;
+      padding:10px 14px;
+    }
     .field{
       display: inline-block;
-      margin-left: 46px;
+      @include minTablet{
+        margin-left: 46px;
+      }
       &:first-child{
         margin-left: 0;
+      }
+      &.box_name{
+        display: none;
+        @include minTablet{
+          display: inline-block;
+        }
+      }
+      &.box_code{
+        display: none;
+        @include minTablet{
+          display: inline-block;
+        }
       }
       p{
         margin: 0;
         display: inline-block;
       }
       .subtitle{
-        font-size: 12px;
-        padding-right: 14px;
+        font-size: 11px;
+        display: none;
+        @include minTablet{
+          display: inline-block;
+          font-size: 14px;
+          padding-right: 14px;
+        }
       }
       .name{
         font-weight: 700;
-        font-size: 14px;
+        font-size: 11px;
+        @include minTablet{
+          font-size: 14px;
+        }
       }
     }
   }

@@ -8,11 +8,31 @@ block content
     .row
       .col30
         ul.list_activity
-          li.finish Magnitud del daño #[span.detail_progess Juan Perez] 
-          li.disable Inicio del trabajo
-          li.progress Fin (Est.) del trabajo
-          li Asesor de Servicio #[span.name_asesor Juan Perez] 
-          li.asignado Estado #[span ASIGNADO] 
+          li.finish
+            p  Tipo de Siniestro
+            p #[span.detail_progess Colisión] 
+          li.finish
+            p  Parte Comprometida
+            p #[span.detail_progess Delantero RH] 
+          li.finish
+            p  Magnitud del daño
+            p #[span.detail_progess Medio 1-2 paños] 
+          //- li.finish Estado #[span.detail_progess ASIGNADO] 
+          li.finish
+            p Estado
+            select.status#status(name="status")      
+              //- option(hidden selected) Estados
+              option(value="1") Evaluación de daños
+              option(value="2") Preparando Presupuesto
+              option(value="3") Presupuesto x aprobar
+              option(value="4") Aprobado
+              option(value="5") En Proceso
+              option(value="6") Detenido por repuestos
+              option(value="7") Detenido por ampliación
+              option(value="8") Trabajo terminado
+              option(value="9") Listo para Entrega
+        .box_img
+          img(src="https://via.placeholder.com/1920x880", alt="")
         
       .col70
         .container
@@ -43,20 +63,24 @@ block content
             .char_box
               canvas#pieProject(width='300', height='300')
             .box_container
-              .field
-                p.subtitle Control de calidad 
-                p.name.button NO
-              .field
-                p.subtitle tipo de Siniestro
-                p.name Colisión
-              .field
-                p.subtitle Parte Comprometida
-                p.name Delantero RH
-              .field
-                p.subtitle Localidad
-                p.name Lima
-              .field
-                p.subtitle Taller
-                p.name GALLEC SERVICE
+              .box_etapa
+                p.finish #[b Etapa del Proceso]
+                p.line_etapa Preparación Pintura
+              
+              ul.list_activity
+                li.finish Inicio del trabajo #[span.detail_progess 01 Jun 2020] 
+                li.progress Fin (Est.) del trabajo #[span.detail_progess 01 Jun 2020] 
+                li Asesor de Servicio #[span.name_asesor Juan Perez] 
+              
+              .box_inner
+                .field
+                  p.subtitle Taller
+                  p.name GALLEC SERVICE
+                .field
+                  p.subtitle Localidad
+                  p.name Lima
+                .field
+                  p.subtitle Cia. Seguro
+                  p.name.blue Pacífico
               .field.center
-                button.btn Salir
+                button.btn_submit Salir

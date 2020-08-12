@@ -1,13 +1,115 @@
 .box_body{
-  display: flex;
+  display: block;
   padding-top: 30px;
+  @include minTablet{
+    display: flex;
+  }
   .char_box{
-    width: 400px;
+    max-width: 300px;
+    @include minTablet{
+      width: 400px;
+      max-width: initial;
+    }
   }
   .box_container{
     display: flex;
     flex-flow: column;
     justify-content: center;
+    .list_activity{
+      padding-bottom: 24px;
+    }
+    .box_etapa{
+      border:1px solid #000000;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px;
+      margin-bottom: 8px;
+      &.closed{
+        opacity: 0.25;
+        cursor: not-allowed;
+        &::before{
+          position: absolute;
+          display: block;
+          content: '';
+          background-color:transparent;
+          width: 100%;
+          height: 100px;
+          z-index: 10;
+        }
+      }
+      @include minTablet{
+        display: none;
+      }
+      .dropdown-button{
+        height: auto;
+        text-transform: inherit;
+        letter-spacing: inherit;
+        padding: 4px 4px 0px;
+        line-height: 20px;
+        background-color: #dadada;
+        color: #000000;
+        font-size: 14px;
+        i.right{
+          margin-left: 6px;
+          color: #000000;
+        }
+      }
+      p{
+        display: inline-block;
+        font-size: 14px;
+        margin: 0;
+        &.line_etapa{
+          min-width: 174px;
+          font-weight: bold;
+          position: relative;
+          padding: 4px 8px;
+          background-color: #dadada;
+          color: blue;
+          &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            right: 8px;
+            top: 10px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 5px 0 5px;
+            border-color: blue transparent transparent transparent;
+          }
+        }
+        &.line_progress{
+          color: blue;
+        }
+      }
+    }
+    .box_inner{
+      transition: height 0.35s ease-in-out;
+      overflow: hidden;      
+      // &:not(.active) {
+      //   display: none;
+      //   @include minTablet{
+      //     display: block;
+      //   }
+      // }
+      @include minTablet{
+        display: block;
+        width: 310px;
+      }
+      .field{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 8px;
+        padding-right: 8px;
+        @include minTablet{
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
     .field{
       display: block;
       padding-top: 20px;
@@ -20,12 +122,14 @@
       p{
         display: inline-block;
         margin: 0;
-        font-size: 13px;
+        font-size: 16px;
       }
-      .subtitle{
-        min-width: 160px;
-      }
+      
       .name{
+        font-weight: 700;
+        &.blue{
+          color: blue;
+        }
         &.button{
           color: red;
           font-size: 18px;
@@ -34,7 +138,7 @@
           padding: 2px 8px;
         }
       }
-      .btn{
+      .btn_submit{
         border: 0;
         background-color: blue;
         color: white;
@@ -42,6 +146,7 @@
         padding: 6px 24px;
         cursor: pointer;
         outline: none;
+        margin: 30px 0 20px;
       }
     }
   }
