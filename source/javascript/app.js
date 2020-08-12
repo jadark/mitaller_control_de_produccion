@@ -53,7 +53,6 @@ document.querySelector(".box_Tabs").addEventListener('click', function (evn) {
     this.classList.remove("open");
   }
 })
-
 // Detectar Status del proceso
 const selectStatus = document.querySelector("#status");
 if (selectStatus.value != 5) {

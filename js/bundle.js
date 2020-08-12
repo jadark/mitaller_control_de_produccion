@@ -99,16 +99,14 @@
 	    this.classList.remove("open");
 	  }
 	})
-
 	// Detectar Status del proceso
 	const selectStatus = document.querySelector("#status");
-	if (selectStatus.value != 4) {
+	if (selectStatus.value != 5) {
 	  document.querySelector(".box_Tabs").classList.add("closed");
 	  document.querySelector(".box_etapa").classList.add("closed");
 	}
 	selectStatus.addEventListener("change", function (e) {
-	  console.log(this.value, " =====222=========");
-	  if (this.value == 4) {
+	  if (this.value == 5) {
 	    document.querySelector(".box_Tabs").classList.remove("closed")
 	    document.querySelector(".box_etapa").classList.remove("closed");
 	  } else { 
